@@ -1,0 +1,38 @@
+package br.com.alura;
+
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
+import javax.money.MonetaryAmount;
+import javax.money.convert.CurrencyConversion;
+import javax.money.convert.ExchangeRateProvider;
+import javax.money.convert.MonetaryConversions;
+
+import org.javamoney.moneta.Money;
+import org.javamoney.moneta.convert.ExchangeRateType;
+import org.javamoney.moneta.spi.MoneyAmountFactory;
+
+public class Dinheiro {
+	public static void main(String[] args) {
+		/*CurrencyUnit moeda = Monetary.getCurrency("BRL"); //criando a moeda, uma variável, moeda correte
+		MonetaryAmount valorDaParcela = Money.of(75, moeda); //criando um valor, método que recebe valor e moeda
+		System.out.println(valorDaParcela);
+		//trabalhando com multiplicações
+		MonetaryAmount valorTotal = valorDaParcela.multiply(12); //valor total fica valorDaParcela x 12
+		//essa classe monetary amount tem as operações (*, /, +)
+		System.out.println(valorTotal);
+		*/
+		
+		//criando as moedas e atribuindo valores
+		CurrencyUnit dolar = Monetary.getCurrency("USD");
+		CurrencyUnit real = Monetary.getCurrency("BRL");
+		MonetaryAmount valorProduto = Money.of(90, dolar);
+		MonetaryAmount valorImposto = Money.of(30, real);
+		
+		//classe que pega a conversão atual(do dia)
+		ExchangeRateProvider provider = MonetaryConversions.getEchangeRateProvider(ExchangeRateType.ECB);
+		
+		
+		
+	}
+
+}

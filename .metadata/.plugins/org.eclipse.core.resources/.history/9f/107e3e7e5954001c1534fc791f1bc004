@@ -1,0 +1,9 @@
+package br.com.alura;
+
+public class NumeroPorExtenso {
+	public static void main(String[] args) {
+		//formatando um número escrevendo ele por extenso
+		
+	}
+
+}

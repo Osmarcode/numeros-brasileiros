@@ -1,0 +1,21 @@
+package br.com.alura;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.MalformedInputException;
+
+import com.github.gilbertotorrezan.viacep.se.ViaCEPClient;
+
+/*
+ * trabalhando com CEP da API ViaCep que foi incluída no pom
+ * */
+public class CEP {
+	public static void main(String[] args) {
+
+		ViaCEPClient cliente = new ViaCepClient();
+		
+		
+	}
+
+}

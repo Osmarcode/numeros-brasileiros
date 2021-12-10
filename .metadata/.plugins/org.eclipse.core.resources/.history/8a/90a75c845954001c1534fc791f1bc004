@@ -1,0 +1,12 @@
+package br.com.alura;
+
+import br.com.caelum.stella.inwords.NumericToWordsConverter;
+
+public class NumeroPorExtenso {
+	public static void main(String[] args) {
+		//formatando um número escrevendo ele por extenso
+		NumericToWordsConverter con = new NumericToWordsConverter(new InteiroSemFormato());
+		
+	}
+
+}

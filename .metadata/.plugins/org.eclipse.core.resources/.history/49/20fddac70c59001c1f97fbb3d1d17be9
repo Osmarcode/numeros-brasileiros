@@ -1,0 +1,23 @@
+package br.com.alura;
+
+import java.net.URL;
+import java.nio.charset.MalformedInputException;
+
+/*
+ * trabalhando com CEP
+ * */
+public class CEP {
+	public static void main(String[] args) {
+		
+		try {
+			URL url = new URL("https://viacep.com.br/ws/01001000/json/"); //chama a URL
+			//abrindo conexão http
+			HttpURLConnection conec = (url.openConnection());
+			
+		} catch (MalformedInputException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

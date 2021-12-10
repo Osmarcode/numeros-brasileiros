@@ -1,0 +1,16 @@
+package br.com.alura;
+
+import br.com.caelum.stella.inwords.InteiroSemFormato;
+import br.com.caelum.stella.inwords.NumericToWordsConverter;
+
+public class NumeroPorExtenso {
+	public static void main(String[] args) {
+		//formatando um número escrevendo ele por extenso
+		NumericToWordsConverter conversor = new NumericToWordsConverter(new InteiroSemFormato());
+		double valor = 75.00;
+		String valorPorExtenso = conversor.toWords(valor);
+		
+		System.out.println(valorPorExtenso);
+	}
+
+}

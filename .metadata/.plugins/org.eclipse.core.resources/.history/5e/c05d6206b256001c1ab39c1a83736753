@@ -1,0 +1,53 @@
+package br.com.alura;
+
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
+import javax.money.MonetaryAmount;
+import javax.money.convert.CurrencyConversion;
+import javax.money.convert.ExchangeRateProvider;
+import javax.money.convert.MonetaryConversions;
+
+import org.javamoney.moneta.Money;
+import org.javamoney.moneta.convert.ExchangeRateType;
+import org.javamoney.moneta.function.MonetaryOperators;
+import org.javamoney.moneta.spi.MoneyAmountFactory;
+
+public class Dinheiro {
+	public static void main(String[] args) {
+		CurrencyUnit moeda = Monetary.getCurrency("BRL"); //criando a moeda, uma variável, moeda correte
+		MonetaryAmount valorDaParcela = Money.of(75, moeda); //criando um valor, método que recebe valor e moeda
+		System.out.println(valorDaParcela);
+		//trabalhando com multiplicações
+		MonetaryAmount valorTotal = valorDaParcela.multiply(12); //valor total fica valorDaParcela x 12
+		//essa classe monetary amount tem as operações (*, /, +)
+		System.out.println(valorTotal);
+		
+		
+		//criando as moedas e atribuindo valores
+		CurrencyUnit dolar = Monetary.getCurrency("USD");
+		CurrencyUnit real = Monetary.getCurrency("BRL");
+		MonetaryAmount valorProdutoDolar = Money.of(90, dolar);
+		MonetaryAmount valorImpostoReal = Money.of(30, real);
+		
+		//provider que vai pegar a cotação
+		ExchangeRateProvider provider = MonetaryConversions.getExchangeRateProvider(ExchangeRateType.ECB);
+		
+		//pegando a conversão atual(do dia)
+		CurrencyConversion conversaoAtual = provider.getCurrencyConversion(dolar);
+		
+		//convertendo o valor do imposto de real para dolar
+		MonetaryAmount valorImpostoDolar = conversaoAtual.apply(valorImpostoReal);
+		
+		//valor do imposto já está dolar, agora podemos somar com o valor inicial do produto
+		MonetaryAmount valorFinalProdutoDolar = valorProdutoDolar.add(valorImpostoDolar);
+		
+		System.out.println(valorFinalProdutoDolar);
+		
+		//trabalhando com porcentagem ex: desconto na classe operator
+		MonetaryAmount desconto = valorTotal.with(MonetaryOperators.percent(10));
+		System.out.println(desconto);
+		
+		
+	}
+
+}

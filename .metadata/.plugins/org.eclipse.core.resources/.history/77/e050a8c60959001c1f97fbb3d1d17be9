@@ -1,0 +1,23 @@
+package br.com.alura;
+
+import br.com.caelum.stella.validation.CPFValidator;
+import br.com.caelum.stella.validation.InvalidStateException;
+
+public class ExercicioCPFComValor {
+	public static void main(String[] args) {
+		String cpf = "51720155232";
+		
+		
+		try {//passando o validador e o documento
+			validarDocumentos(new CPFValidator(), cpf);
+			System.out.println("CPF VÁLIDO.");
+			
+		}catch(InvalidStateException e) {
+			System.out.println("CPF INVÁLIDO : " + e); //'e' chamando a exception
+		}
+		
+		
+		
+	}
+
+}

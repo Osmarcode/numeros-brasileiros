@@ -1,0 +1,29 @@
+package br.com.alura;
+
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
+import javax.money.MonetaryAmount;
+
+import org.javamoney.moneta.Money;
+import org.javamoney.moneta.spi.MoneyAmountFactory;
+
+public class Dinheiro {
+	public static void main(String[] args) {
+		CurrencyUnit moeda = Monetary.getCurrency("BRL"); //criando a moeda, uma variável, moeda correte
+		MonetaryAmount valorDaParcela = Money.of(75, moeda); //criando um valor, método que recebe valor e moeda
+		System.out.println(valorDaParcela);
+		//trabalhando com multiplicações
+		MonetaryAmount valorTotal = valorDaParcela.multiply(12); //valor total fica valorDaParcela x 12
+		//essa classe monetary amount tem as operações (*, /, +)
+		System.out.println(valorTotal);
+		
+		CurrencyUnit money = Monetary.getCurrency("USD");
+		CurrencyUnit real = Monetary.getCurrency("BRL");
+		MonetaryAmount valorProduto = Money.of(90, money);
+		MoneyAmount valorImposto = Money.of(30, real);
+		
+		
+		
+	}
+
+}

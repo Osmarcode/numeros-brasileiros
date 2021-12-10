@@ -1,0 +1,27 @@
+package br.com.alura;
+
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
+import javax.money.MonetaryAmount;
+
+import br.com.caelum.stella.validation.CPFValidator;
+import br.com.caelum.stella.validation.InvalidStateException;
+import br.com.caelum.stella.validation.Validator;
+
+public class ExercicioCPFComValor {
+	public static void main(String[] args) {
+		String cpf = "51720155232";
+		
+		CPFValidator validadorCPF = new CPFValidator();
+      
+		try {
+			validadorCPF.assertValid(cpf);
+			CurrencyUnit real = Monetary.getCurrency("BRL");
+			MonetaryAmount valorFaturaCartao = Money.of(900, real);
+			
+		} catch (InvalidStateException e) {
+			System.out.println("Olá cliente, favor entrar no nosso sistema e atualizar seus dados pois seu CPF é inválido. ");
+		}
+
+ }
+}

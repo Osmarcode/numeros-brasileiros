@@ -1,0 +1,29 @@
+package br.com.alura;
+
+import br.com.caelum.stella.validation.CPFValidator;
+import br.com.caelum.stella.validation.InvalidStateException;
+import br.com.caelum.stella.validation.Validator;
+
+public class ExercicioCPFComValor {
+	public static void main(String[] args) {
+		String cpf = "51720155232";
+		
+		try {
+			
+			validarDocumentos(new CPFValidator(), cpf);
+			System.out.println("CPF Válido");
+			
+		} catch (InvalidStateException e) {
+			System.out.println("CPF INVÁLIDO : " + e);
+		}
+		
+	}
+	
+	//utilizando o assertValidator em apenas um lugar que irá replicar para os outros
+			//como todos os docs são Strings facilitou
+			private static void validarDocumentos(Validator<String> validador, String documento) {
+				validador.assertValid(documento);
+			}
+			
+
+}

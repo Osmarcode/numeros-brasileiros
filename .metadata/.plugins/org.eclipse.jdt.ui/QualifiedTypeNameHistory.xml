@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.validation.CNPJValidator"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.validation.Validator"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.validation.TituloEleitoralValidator"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.format.CNPJFormatter"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.format.TituloEleitoralFormatter"/>
+    <fullyQualifiedTypeName name="java.util.Formatter"/>
+    <fullyQualifiedTypeName name="java.text.Format"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.validation.NITValidator"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.format.NITFormatter"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.format.Formatter"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.format.CPFFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.format.FormatStyle"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.inwords.InteiroSemFormato"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="org.javamoney.moneta.spi.MoneyAmountFactory"/>
+    <fullyQualifiedTypeName name="javax.money.convert.CurrencyConversion"/>
+    <fullyQualifiedTypeName name="javax.money.convert.ExchangeRateProvider"/>
+    <fullyQualifiedTypeName name="javax.money.convert.MonetaryConversions"/>
+    <fullyQualifiedTypeName name="org.javamoney.moneta.convert.ExchangeRateType"/>
+    <fullyQualifiedTypeName name="org.javamoney.moneta.function.MonetaryOperators"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.validation.CPFValidator"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.validation.InvalidStateException"/>
+    <fullyQualifiedTypeName name="javax.money.CurrencyUnit"/>
+    <fullyQualifiedTypeName name="javax.money.Monetary"/>
+    <fullyQualifiedTypeName name="javax.money.MonetaryAmount"/>
+    <fullyQualifiedTypeName name="javax.money.NumberValue"/>
+    <fullyQualifiedTypeName name="org.javamoney.moneta.Money"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.inwords.NumericToWordsConverter"/>
+    <fullyQualifiedTypeName name="br.com.caelum.stella.inwords.FormatoDeReal"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="java.nio.charset.MalformedInputException"/>
+    <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+    <fullyQualifiedTypeName name="com.github.gilbertotorrezan.viacep.se.ViaCEPClient"/>
+    <fullyQualifiedTypeName name="com.github.gilbertotorrezan.viacep.shared.ViaCEPEndereco"/>
+</qualifiedTypeNameHistroy>

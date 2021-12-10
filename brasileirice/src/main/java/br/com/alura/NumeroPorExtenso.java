@@ -1,0 +1,27 @@
+package br.com.alura;
+
+import java.math.BigDecimal;
+
+import br.com.caelum.stella.inwords.FormatoDeReal;
+import br.com.caelum.stella.inwords.InteiroSemFormato;
+import br.com.caelum.stella.inwords.NumericToWordsConverter;
+
+public class NumeroPorExtenso {
+	public static void main(String[] args) {
+		//formatando um número escrevendo ele por extenso
+		//formatoDeReal ele no final adiciona a palavra Real(s) e Centavos caso tenha
+		//numerciConverter informa até os centavos também
+		NumericToWordsConverter conversor = new NumericToWordsConverter(new FormatoDeReal());
+
+		//trabalhando com BigDecimal
+		//quando estiver trabalhando com moeda é o mais recomendado
+		//BigDecimal é uma API melhorada
+		BigDecimal valor = new BigDecimal("75.00");
+		
+		//bigdecimal que é String sendo passado para doubleValue
+		String valorPorExtenso = conversor.toWords(valor.doubleValue());
+		
+		System.out.println(valorPorExtenso);
+	}
+
+}
