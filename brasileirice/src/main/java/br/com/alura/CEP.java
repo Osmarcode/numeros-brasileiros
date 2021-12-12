@@ -10,7 +10,7 @@ import com.github.gilbertotorrezan.viacep.shared.ViaCEPEndereco;
 
 /*
  * trabalhando com CEP da API ViaCep que foi incluída no pom
- * chamando a API do viacep
+ * 
  * */
 public class CEP {
 	public static void main(String[] args) {

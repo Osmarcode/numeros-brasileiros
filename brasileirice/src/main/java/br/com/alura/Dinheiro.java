@@ -18,11 +18,11 @@ import br.com.caelum.stella.inwords.NumericToWordsConverter;
 
 public class Dinheiro {
 	public static void main(String[] args) {
-		CurrencyUnit moeda = Monetary.getCurrency("BRL"); //criando a moeda, uma variável, moeda correte
+		CurrencyUnit moeda = Monetary.getCurrency("BRL"); //criando a moeda, uma variável, moeda corrente
 		MonetaryAmount valorDaParcela = Money.of(75, moeda); //criando um valor, método que recebe valor e moeda
 		System.out.println(valorDaParcela);
-		//trabalhando com multiplicações
-		MonetaryAmount valorTotal = valorDaParcela.multiply(12); //valor total fica valorDaParcela x 12
+		//trabalhando com multiplicações valor total fica valorDaParcela x 12
+		MonetaryAmount valorTotal = valorDaParcela.multiply(12); 
 		//essa classe monetary amount tem as operações (*, /, +)
 		System.out.println(valorTotal);
 		
@@ -48,15 +48,13 @@ public class Dinheiro {
 		System.out.println(valorFinalProdutoDolar);
 		
 		//trabalhando com porcentagem ex: desconto na classe operator
-		//trabalhando com Stella e escrevendo por extenso
 		MonetaryAmount desconto = valorTotal.with(MonetaryOperators.percent(10));
 		System.out.println(desconto);
 		
 		//convertendo monetaryamount		
 		NumberValue descontoSemMoeda = desconto.getNumber();
 		NumericToWordsConverter conversor = new NumericToWordsConverter(new FormatoDeReal());
-		//convertendo para ficar por extenso
-		//como está como double 
+		//convertendo para ficar por extenso porque estava como double 
 		String valorPorExtenso = conversor.toWords(descontoSemMoeda.doubleValue());
 		System.out.println(valorPorExtenso);
 		System.out.println("Olá Aluno. Ganhe " + valorPorExtenso + "ouvindo nosso Podcast. LINK");

@@ -19,12 +19,8 @@ import br.com.caelum.stella.validation.Validator;
 public class ExercicioCPFComValor {
 	public static void main(String[] args) {
 		String cpf = "51720155232";
-		
 		CPFValidator validadorCPF = new CPFValidator();
-		
-		//chamando endereço do cliente com ViaCep
-				
-      
+ 
 		try {
 			validadorCPF.assertValid(cpf);
 			CurrencyUnit real = Monetary.getCurrency("BRL");
@@ -34,14 +30,10 @@ public class ExercicioCPFComValor {
 			
 			NumericToWordsConverter conversor = new NumericToWordsConverter(new FormatoDeReal());
 			String valorFaturaCartaoPorExtenso = conversor.toWords(valorFaturaCartaoSemMoeda.doubleValue());
-		
 			System.out.println("Caro cliente. Sua fatura esse mês chegou no valor de " + valorFaturaCartaoPorExtenso);
 			
 		} catch (InvalidStateException e) {
 			System.out.println("Olá cliente, favor entrar no nosso sistema e atualizar seus dados pois seu CPF é inválido. ");
 		}
-		
-		
-
  }
 }

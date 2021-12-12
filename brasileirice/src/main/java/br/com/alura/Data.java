@@ -23,7 +23,7 @@ public class Data {
 		//criando um formatador de hora que não precisa criar o ofPattern
 		//SHORT OU MEDIUM LOCALIZEDDATETIME
 		//criando um novo locale que é do tipo ENUM
-		//esse Locale vai ser respeitado em máquina que estejam em qualquer língua
+		//esse Locale vai ser respeitado em máquinas que estejam em qualquer língua
 		//vai respeitar esse Locale em pt
 		DateTimeFormatter formatadorCurto = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).withLocale(new Locale("pt", "br"));           
 		System.out.println(agora.format(formatadorCurto));

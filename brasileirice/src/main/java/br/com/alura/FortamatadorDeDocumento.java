@@ -11,9 +11,9 @@ import br.com.caelum.stella.validation.Validator;
 
 public class FortamatadorDeDocumento {
 public static void main(String[] args) {
-	String cpf = "878.972.400-37" ; //vamos tirar a formatação
-	String cnpj = "98.610.832/0001-24"; //tirar a formatação
-	String titulo = "413713140884"; //formatar
+	String cpf = "878.972.400-37" ;
+	String cnpj = "98.610.832/0001-24";
+	String titulo = "413713140884";
 	String nit = "44134005138";
 	
 	//classe que formata o CPF
@@ -25,7 +25,7 @@ public static void main(String[] args) {
 //	System.out.println(cpf);//o cpf normal com formatação
 //	System.out.println(cpfSemFormatacao);//o cpf recebendo o unformat
 	
-	
+	//instanciando um objeto chamando o formatador
 	CNPJFormatter formatadorCNPJ = new CNPJFormatter();
 	String cnpjSemFormatacao = formatadorCNPJ.unformat(cnpj);
 	System.out.println(cnpj);
