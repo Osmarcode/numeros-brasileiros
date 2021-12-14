@@ -16,17 +16,10 @@ public static void main(String[] args) {
 	String titulo = "413713140884";
 	String nit = "44134005138";
 	
-	//classe que formata o CPF
-	//chamando a classe e instanciando um objeto
-	//chamando o método que formata
-	//criando um atributo que recebe a formatação
-//	CPFFormatter formatadorCPF = new CPFFormatter();
-//	String cpfSemFormatacao = formatadorCPF.unformat(cpf);
-//	System.out.println(cpf);//o cpf normal com formatação
-//	System.out.println(cpfSemFormatacao);//o cpf recebendo o unformat
-	
 	//instanciando um objeto chamando o formatador
 	CNPJFormatter formatadorCNPJ = new CNPJFormatter();
+	
+	//instanciando um objeto que vai retirar a formatação
 	String cnpjSemFormatacao = formatadorCNPJ.unformat(cnpj);
 	System.out.println(cnpj);
 	System.out.println(cnpjSemFormatacao);
